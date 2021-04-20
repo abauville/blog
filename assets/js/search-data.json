@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Title",
-            "content": "import plotly.express as px import numpy as np # from IPython.display import HTML . x = np.linspace(-1,1,20) y = x**2 px.scatter(x=x,y=y) # HTML(fig.to_html()) .",
+            "content": "import plotly.express as px import numpy as np from IPython.display import HTML . x = np.linspace(-1,1,20) y = x**2 fig = px.scatter(x=x,y=y) HTML(fig.to_html()) . . .",
             "url": "https://abauville.github.io/data_science_blog/2021/04/20/plotly-test.html",
             "relUrl": "/2021/04/20/plotly-test.html",
             "date": " • Apr 20, 2021"
