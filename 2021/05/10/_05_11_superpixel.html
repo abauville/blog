@@ -268,7 +268,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">segment_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">enforce_connectivity</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_type</span><span class="o">=</span><span class="s1">&#39;image&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Segments an image using K-Means clustering</span>
+    <span class="sd">&quot;&quot;&quot;Segments an image into superpixels by using K-Means clustering and connectivity enforcement</span>
 <span class="sd">    </span>
 <span class="sd">Parameters</span>
 <span class="sd">----------</span>
