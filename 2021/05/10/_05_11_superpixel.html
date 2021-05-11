@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -133,6 +133,24 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A typical image may contain millions of pixels, which makes operation on images and computer vision in general pretty expensive computationally. However, most of the image is actually composed of relatively large regions of similar color. Thus, if we can identify these regions we can efficiently reduce the size of the image while keeping most of the relevant information, i.e. color and edges. Enter superpixels. "Superpixels group pixels similar in color and other low-level properties" (<a href="https://arxiv.org/pdf/1612.01601.pdf">Stutz et al.</a>). They can be used to improve the computational efficiency for problems such as image segmentation, tracking, or 3-D reconstruction.</p>
+<p>According to Stutz et al., superpixels must have the following properties: "</p>
+<ul>
+<li><strong>Partition</strong>. Superpixels should define a partition of the image, i.e. superpixels should be disjoint and assign a label to every pixel.</li>
+<li><strong>Connectivity</strong>. Superpixels are expected to represent connected sets of pixels.</li>
+<li><strong>Boundary Adherence</strong>. Superpixels should preserve image boundaries. Here, the appropriate definition of image boundaries may depend on the application.</li>
+<li><strong>Compactness, Regularity and Smoothness</strong>. In the absence of image boundaries, superpixels should be compact, placed regularly and exhibit smooth boundaries.</li>
+<li><strong>Efficiency</strong>. Superpixels should be generated efficiently.</li>
+<li><strong>Controllable Number of Superpixels</strong>. The number of generated superpixels should be controllable."</li>
+</ul>
+<p>In recent years, <a href="https://www.iro.umontreal.ca/~mignotte/IFT6150/Articles/SLIC_Superpixels.pdf">SLIC</a> has emerged as a popular algorithm for image segmentation into superpixel. Fundamentally, SLIC works by performing K-means clustering on a 5D feature space composed of color and space (xy). The CIELAB color space is prefered over RGB because it is more visually homogeneous.</p>
+<p>In this blogpost I will implement an algorithm for superpixel segmentation that is fundamentally similar to SLIC, i.e. clustering over color and spatial feature space. There a two important parameters in the algorithm: the relative weight given to color and spatial features (called "compactness" in SLIC), and the number of superpixels. SLIC uses an initial cluster centroid positioning and partial neighborhood calculation to speed up the computation. For the purpose of clarity and to allow for some more exploration, I ignore these aspects. Because of these different choices, I also employ a different method to ensure connectivy. My implementation is based on skimage, sklearn and numpy, with matplotlib for visualization.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Setup">Setup<a class="anchor-link" href="#Setup"> </a></h1><p>We start by importing the necessary libraries and some helper functions for plotting.</p>
