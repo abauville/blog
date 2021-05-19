@@ -441,14 +441,14 @@ pre code { font-size: 15px !important; }
 
 .input_area pre { border-left: 1px solid lightcoral; }
 
-.output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; font-size: 16px; }
+.output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; font-size: 15px; }
 
 .code_cell table { width: auto; }
 
 /* Dracula Theme v1.2.5 https://github.com/zenorocha/dracula-theme Copyright 2016, All rights reserved Code licensed under the MIT license */
 .highlight { background: #323443 !important; color: #f8f8f2 !important; }
 
-.highlight pre, .highlight code { background: #323443; color: #f8f8f2; font-size: 110%; }
+.highlight pre, .highlight code { background: #323443; color: #f8f8f2; font-size: 100%; }
 
 .highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #e7997a; }
 
@@ -480,8 +480,8 @@ pre code { font-size: 15px !important; }
 
 .highlight .gd { color: #ff5555; }
 
-p code { font-size: 19px; }
+p code { font-size: 15px; }
 
-p pre code { font-size: 15px; }
+p code { font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */
