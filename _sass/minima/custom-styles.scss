@@ -3,6 +3,15 @@
 @import "minima/fastpages-styles";   
 
 
+
+// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
+@import "minima/fastpages-dracula-highlight"; 
+
+
+
+/*-----------------------------------*/
+/*----- ADD YOUR STYLES BELOW -------*/
+
 // make non-headings slightly lighter
 .post-content p, .post-content li {
     font-size: 16px;
@@ -13,8 +22,10 @@ p code{
     font-size: 16px;
   }
 
-/*-----------------------------------*/
-/*----- ADD YOUR STYLES BELOW -------*/
-
-// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
-@import "minima/fastpages-dracula-highlight"; 
+// width of the content area
+// can be set as "px" or "%"
+$content-width:    800px; // default: 1000px
+$on-palm:          700px; // default: 800px
+$on-laptop:        800px; // default: 1000px
+$on-medium:        800px; // default: 1000px
+$on-large:         1000px; // default: 1200px
