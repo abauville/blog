@@ -331,7 +331,7 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; }
 
-.post-content p, .post-content li { font-size: 16px; color: #515151; }
+.post-content p, .post-content li { font-size: 20px; color: #515151; }
 
 .post-link { font-weight: normal; }
 
@@ -342,8 +342,6 @@ h2 { margin-top: 2rem !important; }
 h3, h4 { margin-top: 1.5rem !important; }
 
 p { margin-top: 1rem !important; margin-bottom: 1rem !important; }
-
-p code { font-size: 100%; }
 
 h1, h2, h3, h4 { font-weight: normal !important; margin-bottom: 0.5rem !important; }
 
@@ -424,6 +422,10 @@ table th { text-align: center !important; }
 .code_cell { margin: 1.5rem 0px !important; }
 
 pre code { font-size: 15px !important; }
+
+.post-content p, .post-content li { font-size: 16px; color: #515151; }
+
+p code { font-size: 16px; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
