@@ -13,11 +13,11 @@
 <link rel="canonical" href="https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html" />
 <meta property="og:url" content="https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html" />
 <meta property="og:site_name" content="Arthur Bauville" />
-<meta property="og:image" content="https://abauville.github.io/data_science_blog/images/some_folder/your_image.png" />
+<meta property="og:image" content="https://abauville.github.io/data_science_blog/images/Covers/2021_05_19.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html","@type":"BlogPosting","headline":"x.grad demystified","dateModified":"2021-05-19T00:00:00-05:00","datePublished":"2021-05-19T00:00:00-05:00","image":"https://abauville.github.io/data_science_blog/images/some_folder/your_image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html"},"description":"An introduction to automatic differentiation with PyTorch and computing a gradient field","@context":"https://schema.org"}</script>
+{"url":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html","@type":"BlogPosting","headline":"x.grad demystified","dateModified":"2021-05-19T00:00:00-05:00","datePublished":"2021-05-19T00:00:00-05:00","image":"https://abauville.github.io/data_science_blog/images/Covers/2021_05_19.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html"},"description":"An introduction to automatic differentiation with PyTorch and computing a gradient field","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/data_science_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://abauville.github.io/data_science_blog/feed.xml" title="Arthur Bauville" /><link rel="shortcut icon" type="image/x-icon" href="/data_science_blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -94,7 +94,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -315,6 +315,7 @@ $\begin{align}
     <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">[::</span><span class="n">r</span><span class="p">,::</span><span class="n">r</span><span class="p">],</span><span class="n">Y</span><span class="p">[::</span><span class="n">r</span><span class="p">,::</span><span class="n">r</span><span class="p">],</span><span class="n">X</span><span class="o">.</span><span class="n">grad</span><span class="p">[::</span><span class="n">r</span><span class="p">,::</span><span class="n">r</span><span class="p">],</span> <span class="n">Y</span><span class="o">.</span><span class="n">grad</span><span class="p">[::</span><span class="n">r</span><span class="p">,::</span><span class="n">r</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -323,6 +324,28 @@ $\begin{align}
 
 <div class="output_wrapper">
 <div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-45a7beac2ce6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> plt<span class="ansi-blue-fg">.</span>xlabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;$x$&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> _ <span class="ansi-blue-fg">=</span> plt<span class="ansi-blue-fg">.</span>ylabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;$y$&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>savefig<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/opt/anaconda3/lib/python3.8/site-packages/matplotlib/pyplot.py</span> in <span class="ansi-cyan-fg">savefig</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    857</span> <span class="ansi-green-fg">def</span> savefig<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    858</span>     fig <span class="ansi-blue-fg">=</span> gcf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 859</span><span class="ansi-red-fg">     </span>res <span class="ansi-blue-fg">=</span> fig<span class="ansi-blue-fg">.</span>savefig<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    860</span>     fig<span class="ansi-blue-fg">.</span>canvas<span class="ansi-blue-fg">.</span>draw_idle<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># need this if &#39;transparent=True&#39; to reset colors</span>
+<span class="ansi-green-intense-fg ansi-bold">    861</span>     <span class="ansi-green-fg">return</span> res
+
+<span class="ansi-red-fg">TypeError</span>: savefig() missing 1 required positional argument: &#39;fname&#39;</pre>
+</div>
+</div>
 
 <div class="output_area">
 
