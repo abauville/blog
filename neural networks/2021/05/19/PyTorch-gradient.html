@@ -4,19 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>An introduction to automatic differentiation with PyTorch - computing a gradient field | Arthur Bauville</title>
+<title>x.grad demystified | Arthur Bauville</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="An introduction to automatic differentiation with PyTorch - computing a gradient field" />
+<meta property="og:title" content="x.grad demystified" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog about data science and programming experiments" />
-<meta property="og:description" content="A blog about data science and programming experiments" />
-<link rel="canonical" href="https://abauville.github.io/data_science_blog/2021/05/19/PyTorch-gradient.html" />
-<meta property="og:url" content="https://abauville.github.io/data_science_blog/2021/05/19/PyTorch-gradient.html" />
+<meta name="description" content="An introduction to automatic differentiation with PyTorch and computing a gradient field" />
+<meta property="og:description" content="An introduction to automatic differentiation with PyTorch and computing a gradient field" />
+<link rel="canonical" href="https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html" />
+<meta property="og:url" content="https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html" />
 <meta property="og:site_name" content="Arthur Bauville" />
+<meta property="og:image" content="https://abauville.github.io/data_science_blog/images/some_folder/your_image.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://abauville.github.io/data_science_blog/2021/05/19/PyTorch-gradient.html","@type":"BlogPosting","headline":"An introduction to automatic differentiation with PyTorch - computing a gradient field","dateModified":"2021-05-19T00:00:00-05:00","datePublished":"2021-05-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://abauville.github.io/data_science_blog/2021/05/19/PyTorch-gradient.html"},"description":"A blog about data science and programming experiments","@context":"https://schema.org"}</script>
+{"url":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html","@type":"BlogPosting","headline":"x.grad demystified","dateModified":"2021-05-19T00:00:00-05:00","datePublished":"2021-05-19T00:00:00-05:00","image":"https://abauville.github.io/data_science_blog/images/some_folder/your_image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://abauville.github.io/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html"},"description":"An introduction to automatic differentiation with PyTorch and computing a gradient field","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/data_science_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://abauville.github.io/data_science_blog/feed.xml" title="Arthur Bauville" /><link rel="shortcut icon" type="image/x-icon" href="/data_science_blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,16 +88,23 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">An introduction to automatic differentiation with PyTorch - computing a gradient field</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-19T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">x.grad demystified</h1><p class="page-description">An introduction to automatic differentiation with PyTorch and computing a gradient field</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-19T00:00:00-05:00" itemprop="datePublished">
         May 19, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/data_science_blog/categories/#neural networks">neural networks</a>
+        
+      
+      </p>
     
 
     
@@ -133,6 +141,31 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The key algorithm of neural networks is back-propagation which applies the chain rule to compute derivatives of a function. In PyTorch, assuming you have defined a function, say <code>f = sin(x)</code>, you would compute its gradient by calling <code>f.backward()</code> followed by <code>x.grad</code>. The gradient is a function but <code>x.grad</code> returns values, so it was not immediately obvious to me what was happening.</p>
+<p>To remind you, the gradient of scalar function $f(x,y,z)$ is a vector field defined by:
+$\begin{align}
+    \nabla f &amp;= \begin{bmatrix}
+           \frac{d f}{d x} \\
+           \frac{d f}{d y} \\
+           \frac{d f}{d z} \\
+         \end{bmatrix}
+  \end{align}$</p>
+<p>You can sample this vector field at a given position say $(X,Y,Z)$.
+$\begin{align}
+    \nabla f(X,Y,Z) &amp;= \begin{bmatrix}
+           \frac{d f(X,Y,Z)}{d x} \\
+           \frac{d f(X,Y,Z)}{d y} \\
+           \frac{d f(X,Y,Z)}{d z} \\
+         \end{bmatrix}
+  \end{align}$</p>
+<p>It turns out that calling <code>f.backward()</code> computes the function $\nabla f$. When calling <code>x.grad</code>, PyTorch treats the tensor <code>x</code> as the axis $x$ and its values as the positions $X$. Thus, <code>x.grad</code> returns $\frac{d f(X,Y,Z)}{d x}$.</p>
+<p>To illustrate this concept, let's compute the gradient of a scalar function of one or two variables.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -319,7 +352,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/data_science_blog/2021/05/19/PyTorch-gradient.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="abauville/data_science_blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/data_science_blog/neural%20networks/2021/05/19/PyTorch-gradient.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
