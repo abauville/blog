@@ -1,9 +1,17 @@
 // override defalt minima variables 
 
+// // width of the content area
+// // can be set as "px" or "%"
+// $content-width:    1000px;
+// $on-palm:          800px;
+// $on-laptop:        1000px;
+// $on-medium:        1000px;
+// $on-large:         1200px;
+
 // width of the content area
 // can be set as "px" or "%"
-$content-width:    1000px;
-$on-palm:          800px;
-$on-laptop:        1000px;
-$on-medium:        1000px;
-$on-large:         1200px;
+$content-width:     800px; // default: 1000px
+$on-palm:           700px; // default: 800px
+$on-laptop:         800px; // default: 1000px
+$on-medium:         800px; // default: 1000px
+$on-large:         1000px; // default: 1200px
