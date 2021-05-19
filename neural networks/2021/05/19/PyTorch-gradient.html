@@ -94,7 +94,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
@@ -145,21 +145,21 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The key algorithm of neural networks is back-propagation which applies the chain rule to compute derivatives of a function. In PyTorch, assuming you have defined a function, say <code>f = sin(x)</code>, you would compute its gradient by calling <code>f.backward()</code> followed by <code>x.grad</code>. The gradient is a function but <code>x.grad</code> returns values, so it was not immediately obvious to me what was happening.</p>
 <p>To remind you, the gradient of scalar function $f(x,y,z)$ is a vector field defined by:
-$\begin{align}
-    \nabla f &amp;= \begin{bmatrix}
-           \frac{d f}{d x} \\
-           \frac{d f}{d y} \\
-           \frac{d f}{d z} \\
+$
+    \nabla f = \begin{bmatrix}
+           \frac{d f}{d x}
+           \frac{d f}{d y}
+           \frac{d f}{d z}
          \end{bmatrix}
-  \end{align}$</p>
+$</p>
 <p>You can sample this vector field at a given position say $(X,Y,Z)$.
-$\begin{align}
+$
     \nabla f(X,Y,Z) &amp;= \begin{bmatrix}
            \frac{d f(X,Y,Z)}{d x} \\
            \frac{d f(X,Y,Z)}{d y} \\
            \frac{d f(X,Y,Z)}{d z} \\
          \end{bmatrix}
-  \end{align}$</p>
+$</p>
 <p>It turns out that calling <code>f.backward()</code> computes the function $\nabla f$. When calling <code>x.grad</code>, PyTorch treats the tensor <code>x</code> as the axis $x$ and its values as the positions $X$. Thus, <code>x.grad</code> returns $\frac{d f(X,Y,Z)}{d x}$.</p>
 <p>To illustrate this concept, let's compute the gradient of a scalar function of one or two variables.</p>
 
