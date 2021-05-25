@@ -1,11 +1,8 @@
 ---
 layout: page
-title: About Me
+title: Arthur Bauville
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+I am researcher in Earth sciences passionate about data science, machine learning, physics and simulations. I am currently living and working in Yokohama, Japan, but I am open to new career opportunities in Europe. Have a look at my [resume]("./images/CV/CV_Arthur_Bauville.pdf").
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
