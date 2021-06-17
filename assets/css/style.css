@@ -425,9 +425,9 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-.post-content p, .post-content li { font-size: 17px; color: #515151; }
+.post-content p, .post-content li { font-size: 18px; color: #515151; }
 
-.page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Georgia", "Times New Roman", serif !important; font-size: 17px; }
+.page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Georgia", "Times New Roman", serif !important; font-size: 18px; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
@@ -450,7 +450,7 @@ pre code { font-size: 15px !important; }
 /* Dracula Theme v1.2.5 https://github.com/zenorocha/dracula-theme Copyright 2016, All rights reserved Code licensed under the MIT license */
 .highlight { background: #323443 !important; color: #f8f8f2 !important; }
 
-.highlight pre, .highlight code { background: #323443; color: #f8f8f2; font-size: 100%; }
+.highlight pre, .highlight code { background: #323443; color: #f8f8f2; font-size: 90%; }
 
 .highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #e7997a; }
 
@@ -482,7 +482,7 @@ pre code { font-size: 15px !important; }
 
 .highlight .gd { color: #ff5555; }
 
-p code { font-size: 15px; }
+p code { font-size: 18px; }
 
 p code { font-size: 15px; }
 
