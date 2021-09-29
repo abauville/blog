@@ -11,9 +11,6 @@ permalink: /publications/
 </style>
 
 
-<h1>
-    Publications
-</h1>
 <h2>
     Peer-reviewed
 </h2>
