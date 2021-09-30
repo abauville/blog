@@ -19,20 +19,9 @@
   
 
   
-      "page1": {
-          "title": "About me",
-          "content": "I am researcher in Earth sciences passionate about data science, machine learning, physics and simulations. I am currently living and working in Yokohama, Japan, but I am open to new career opportunities in Europe. Have a look at my resume. .",
-          "url": "https://abauville.github.io/blog/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
 
   
-
-  
-      ,"page3": {
+      "page2": {
           "title": "Publications",
           "content": "Peer-reviewed . Bauville, A., &amp; Yamato, P., 2020, Pressure-to-depth conversion models for metamorphic rocks: derivation and applications, Geochemistry, Geophysics, Geosystems. DOI: 10.1029/2020GC009280, PDF . Humair, F., Bauville, A., Epard, J-L., Schmalholz, S. M., 2020, Interaction of folding and thrusting during fold-and-thrust-belt evolution: Insights from numerical simulations and application to the Swiss Jura and the Canadian Foothills, Tectonophysics, Tectonophysics, v. 789, p. 228474 DOI: 10.1016/j.tecto.2020.228474 PDF . Spitz, R., Bauville, A., Epard, J-L., Kaus, B. J. P, Popov, A., Schmalholz, S. M., 2020, Control of 3-D tectonic inheritance on fold-and-thrust belts: insights from 3-D numerical models and application to the Helvetic nappe system, Solid Earth. DOI: 10.5194/se-11-999-2020, PDF . Bauville, A., Furuichi, M., &amp; Gerbault, M., 2020, Control of fault weakening on the structural styles of underthrusting-dominated non-cohesive accretionary wedges. JGR: Solid Earth, 125(3), DOI: 10.1029/2019JB019220, PDF . Bauville, A., &amp; Baumann, T. S., 2019, geomIO: An Open-Source MATLAB Toolbox to Create the Initial Configuration of 2-D/3-D Thermo-Mechanical Simulations From 2-D Vector Drawings. Geochemistry, Geophysics, Geosystems, 20(3), 1665-1675. DOI: 10.1029/2018GC008057, PDF, Supporting information . Koge, H., Yamada, Y., Ohde, A., Bauville, A., Yamaguchi, A., &amp; Ashi, J., 2018, Dynamic formation process of thick deformation zone on the shallow plate boundary fault of the Japan Trench: insight from analog experiments of half-graben subduction. Progress in Earth and Planetary Science, 5(1), 69. DOI: 10.1186/s40645-018-0230-5 . Furuichi, M., Nishiura, D., Kuwano, O., Bauville, A., Hori, T., &amp; Sakaguchi, H., 2018, Arcuate stress state in accretionary prisms from real-scale numerical sandbox experiments. Scientific reports, 8(1), 1-11.DOI: 10.1038/s41598-018-26534-x, PDF . Bauville, A.. &amp; Schmalholz, S. M., 2017, Tectonic inheritance and kinematic strain localization as trigger for the formation of the Helvetic nappes, Switzerland. Swiss Journal of Geosciences, p. 1-12, DOI: 10.1007/s00015-017-0260-9, PDF . Kaus, B. J. P., Popov, A. A., Baumann, T. S., Püsök, A. E., Bauville, A., Fernandez, N. &amp; Collignon, M., 2016, Forward and inverse modelling of lithospheric deformation on geological timescales. NIC Symposium 2016 - Proceedings. NIC Series. Vol. 48. edited by K. Binder, M. Müller, A. Schnurpfeil, p. 299-307. PDF . Picazo, S., Müntener, O., Manatschal, G., Bauville, A., Karner, G., &amp; Johnson, C., 2016, Mapping the nature of mantle domains in Western and Central Europe based on clinopyroxene and spinel chemistry: Evidence for mantle modification during an extensional cycle. Lithos, v. 266, p. 233-263, DOI: 10.1016/j.lithos.2016.08.029, PDF . Jaquet, Y., Bauville, A., &amp; Schmalholz, S. M., 2014, Overthrusting versus folding: 2-D quantitative modeling and its application to the Helvetic and Jura fold and thrust belts, Journal of Structural Geology, v. 62, p. 25-37, DOI: 10.1016/j.jsg.2014.01.010, PDF . Pêcher, A., Arndt, N., Jean, A., Bauville, A., Ganino, C., &amp; Athurion, C., 2013, Structure of the Panzhihua intrusion and its Fe-Ti-V deposit, China, Geoscience Frontiers, v. 4-5, p. 571-581, DOI: 10.1016/j.gsf.2013.02.004 . Bauville, A. &amp; Schmalholz, S. M., 2015, Transition from thin-to thick-skinned tectonics and consequences for nappe formation: numerical simulations and applications to the Helvetic nappe system, Switzerland. Tectonophysics, v. 665, p. 101-117, DOI: 10.1016/j.tecto.2015.09.030 PDF . Bauville, A., &amp; Schmalholz, S. M., 2013, Thermo-mechanical model for the finite strain gradient in kilometer-scale shear zones, Geology, v. 41, p. 567-570, DOI: 10.1130/G33953.1, &lt;a href=https://www.researchgate.net/profile/Arthur-Bauville/publication/258774793_Thermo-mechanical_model_for_the_finite_strain_gradient_in_kilometer-scale_shear_zones/links/00b4952f89b7f9760c000000/Thermo-mechanical-model-for-the-finite-strain-gradient-in-kilometer-scale-shear-zones.pdf&gt;PDF&lt;/a&gt; . Bauville, A., Epard, J-L., &amp; Schmalholz, S. M., 2013, A simple thermo-mechanical shear model applied to the Morcles fold nappe (Western Alps), Tectonophysics, v. 583, p. 76-87, DOI:10.1016/j.tecto.2012.10.022., PDF . Non peer-reviewed . Butterworth, A. L., Gainsforth, Z., Bauville, A., Bonal, L., Brownlee, D. E., Fakra, S. C., Huss, G. R., Joswiak, D., Kunz, M., Marcus, M. A., Nagashima, K., Ogliore, R. C., Tamura, N., Telus, M., Tyliszczak, T. &amp; Westphal, A. J., 2010, A type IIA chondrule fragment from comet 81P/wild 2 in Stardust track C2052, 2, 74, 41st Lunar and Planetary Science Conference, Bib. Code: 2010LPI....41.2446B. .",
           "url": "https://abauville.github.io/blog/publications/",
@@ -46,10 +35,6 @@
   
 
   
-
-  
-  
-
   
 
   
@@ -62,7 +47,7 @@
   
 
   
-      ,"page11": {
+      ,"page8": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://abauville.github.io/blog/robots.txt",
