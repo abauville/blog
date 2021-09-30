@@ -7,12 +7,12 @@ image: images/logo.png
     .my_picture {
         float: left;
         border-radius: 50%;
-        padding: 12px;
+        padding: 22px;
     }
 </style>
 
 <div>
-<img class="my_pictures", src="https://github.com/abauville/blog/raw/master/images/ID_pic.png" alt="That's my face" width="200">
+<img class="my_picture", src="https://github.com/abauville/blog/raw/master/images/ID_pic.png" alt="That's my face" width="200">
 
 <h1>About me</h1>
 
