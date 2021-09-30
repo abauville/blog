@@ -12,7 +12,7 @@ image: images/logo.png
 </style>
 
 <div>
-<img class="my_picture", src="https://github.com/abauville/blog/raw/master/images/ID_pic.png" alt="That's my face" width="200">
+<img class="my_picture" src="https://github.com/abauville/blog/raw/master/images/ID_pic.png" alt="That's my face" width="200">
 
 <h1>About me</h1>
 
