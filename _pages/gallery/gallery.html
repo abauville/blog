@@ -1,0 +1,76 @@
+<!-- ---
+layout: page
+title: Test
+permalink: /test/
+---
+ -->
+
+<link rel="stylesheet" href="/blog/_pages/gallery/gallery.css">
+<script src="/blog/_pages/gallery/gallery.js" defer></script>
+
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Thumbnail images -->
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Decollement_Fig02.png" style="width:100%"
+                onclick="currentSlide(this)" 
+                alt="Building of accretionary prisms with different intensities of fault weakening. After
+                <a href='https://www.researchgate.net/profile/Arthur-Bauville/publication/339624541_Control_of_Fault_Weakening_on_the_Structural_Styles_of_Underthrusting-Dominated_Non-Cohesive_Accretionary_Wedges/links/5eba2bd7299bf1287f7fce89/Control-of-Fault-Weakening-on-the-Structural-Styles-of-Underthrusting-Dominated-Non-Cohesive-Accretionary-Wedges.pdf' referrerpolicy='no-referrer'>
+                    Bauville et al., 2020.
+                </a>"
+            >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Decollement_Fig04.png" style="width:100%"
+                onclick="currentSlide(this)" 
+                alt="Time evolution of the surface angle of accretionary prism with different intensities of fault weakening (grey to yellow color map) overlain on top of the analytical solution (green box). After
+                <a href='https://www.researchgate.net/profile/Arthur-Bauville/publication/339624541_Control_of_Fault_Weakening_on_the_Structural_Styles_of_Underthrusting-Dominated_Non-Cohesive_Accretionary_Wedges/links/5eba2bd7299bf1287f7fce89/Control-of-Fault-Weakening-on-the-Structural-Styles-of-Underthrusting-Dominated-Non-Cohesive-Accretionary-Wedges.pdf' referrerpolicy='no-referrer'>
+                    Bauville et al., 2020.
+                </a>"
+            >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Pressure_Fig08.png" style="width:100%"
+                onclick="currentSlide(this)" 
+                alt="A theoretical model of the distribution of peak and retrograde metamorphic pressure (dotted blue lines) is overlain on top of observational data points. The black contour lines indicate the depth at which these pressure were recorded. The grey area is not reachable under the model assumptions. After 
+                <a href='https://www.researchgate.net/profile/Arthur-Bauville/publication/348688305_Pressure-to-Depth_Conversion_Models_for_Metamorphic_Rocks_Derivation_and_Applications/links/600faf90299bf14088c091d8/Pressure-to-Depth-Conversion-Models-for-Metamorphic-Rocks-Derivation-and-Applications.pdf' referrerpolicy='no-referrer'>
+                    Bauville and Yamato, 2021.
+                </a>"
+            >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Pressure_Fig09.png" style="width:100%"
+                onclick="currentSlide(this)" 
+                alt="Depth estimates of the rock samples according to the three models considered. After 
+                <a href='https://www.researchgate.net/profile/Arthur-Bauville/publication/348688305_Pressure-to-Depth_Conversion_Models_for_Metamorphic_Rocks_Derivation_and_Applications/links/600faf90299bf14088c091d8/Pressure-to-Depth-Conversion-Models-for-Metamorphic-Rocks-Derivation-and-Applications.pdf' referrerpolicy='no-referrer'>
+                    Bauville and Yamato, 2021.
+                </a>"
+            >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Fish_Vel_field.png" style="width:100%"
+                onclick="currentSlide(this)" alt="Ocean circulation near Japan.">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="/blog/images/gallery/Fish_W0.30.png" style="width:100%"
+                onclick="currentSlide(this)" alt="Optimal trajectories for fishes swimming at a constant speed towards their goal (Zermelo's solution). On-going work.">
+        </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+</div>
